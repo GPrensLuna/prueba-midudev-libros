@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true, // Omitir la comprobación de tipo en los archivos de declaración (.d.ts)
+    "strict": true, // Habilita todas las verificaciones de tipo estrictas
+    "noEmit": true, // No emite archivos de salida
+    "esModuleInterop": true, // Habilita la interoperabilidad entre módulos CommonJS y ES Modules
+    "module": "ESNext", // Especifica el formato de módulo que el compilador debe usar
+    "moduleResolution": "bundler", // Resolución de módulos basada en los sistemas de módulos de los bundlers
+    "resolveJsonModule": true, // Permite importar archivos JSON como módulos
+    "isolatedModules": true, // Asegura que cada archivo sea un módulo independiente
+    "jsx": "preserve", // Mantiene el JSX sin transformación
+    "incremental": true, // Habilita la compilación incremental
+    "declaration": true, // Genera archivos de declaración (.d.ts)
+    "removeComments": true, // Elimina los comentarios de los archivos generados
+    "emitDecoratorMetadata": true, // Emite metadatos para decoradores
+    "experimentalDecorators": true, // Habilita el uso de decoradores
+    "allowSyntheticDefaultImports": true, // Permite importaciones por defecto en módulos que no tienen exportaciones por defecto
+    "sourceMap": true, // Genera archivos de mapas de fuente
+    "baseUrl": "./", // La raíz base para las resoluciones de módulos
+    "strictNullChecks": true, // Habilita comprobaciones estrictas para valores nulos y no definidos
+    "noImplicitAny": false, // Permite el tipo implícito 'any'
+    "strictBindCallApply": false, // No habilita la verificación estricta para 'bind', 'call', y 'apply'
+    "forceConsistentCasingInFileNames": false, // No obliga el uso consistente de mayúsculas/minúsculas en los nombres de archivo
+    "noFallthroughCasesInSwitch": false, // No verifica casos sin fallos en las declaraciones switch
+    "allowUnreachableCode": false, // No muestra errores para el código inalcanzable
+    "allowUnusedLabels": false, // No muestra errores para etiquetas no utilizadas
+    "alwaysStrict": true, // Habilita el modo estricto en todos los archivos
+    "noImplicitThis": true, // Habilita la comprobación de tipos para `this`
+    "noImplicitReturns": true, // Habilita la comprobación de valores de retorno
+    "useUnknownInCatchVariables": true, // Usa `unknown` en lugar de `any` para las variables en catch
+    "strictFunctionTypes": true, // Habilita comprobaciones estrictas para tipos de función
+    "strictPropertyInitialization": true, // Habilita la comprobación de inicialización de propiedades
+    "noImplicitOverride": true, // Habilita la comprobación para sobreescritura de métodos
+    "allowJs": true, // Permite la compilación de archivos JavaScript
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@public/*": ["./public/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next.config.js"
+  ],
+  "exclude": ["node_modules"]
+}
